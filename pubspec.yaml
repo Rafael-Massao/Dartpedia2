@@ -11,7 +11,8 @@ dependencies:
   args: ^2.7.0
   path: ^1.9.0 # O "^" significa a versão mínima que eu preciso
   http: ^1.3.0
-  
+  command_runner:
+    path: command_runner
 
 dev_dependencies:
   lints: ^6.0.0

@@ -1,11 +1,16 @@
 import 'dart:io';
+import 'package:command_runner/command_runner.dart';
 import 'package:http/http.dart' as http;
 
 const String version = "0.0.1"; //Global
 // Metodo principal
-void main(List<String> args) {
+void main(List<String> args) async{
+  var runner = CommandRunner();
+  await runner.run(args);
+
   if (args.isEmpty || args.first == 'help') {
     printUsage();
+  
   } 
   else if (args.first == 'version'){
      print('Dartpedia CLI - versão $version');
