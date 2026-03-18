@@ -6,8 +6,9 @@ const String version = "0.0.1"; //Global
 // Metodo principal
 void main(List<String> args) async{
   var runner = CommandRunner();
-  await runner.run(args);
-
+    onOutput: (String output) async {
+      await write(output)
+    },
   if (args.isEmpty || args.first == 'help') {
     printUsage();
   
