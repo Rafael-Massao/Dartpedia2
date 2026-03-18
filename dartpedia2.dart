@@ -8,7 +8,7 @@ const version = '0.0.1'; // GLOBAL
 void main(List<String> args) async {
   var commandRunner = CommandRunner(
     onOutput: (String output) async {
-},
+    },
     onError: (Object error){
       if (error is Error){
         throw error;
